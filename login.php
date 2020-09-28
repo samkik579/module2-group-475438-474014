@@ -8,6 +8,7 @@
 <?php
 $h = fopen("users.txt", "r");
 $user = $_POST['username'];
+echo "Hello";
 while( !feof($h) ){
 	if(trim(fgets($h)) == $user){
 

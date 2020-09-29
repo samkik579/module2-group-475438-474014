@@ -26,6 +26,7 @@
             //header("Location: upload.html");
            // exit;
            echo "Success";
+           exit;
         }else{
            // header("Location: upload.html");
            // exit;

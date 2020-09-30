@@ -3,20 +3,18 @@
         $user = $_GET['username'];
         $h = fopen("/srv/usersName/users.txt", "r");
         $log = 0;
-        //echo "<ul>\n";
+        //  check if the entered username is in the user list
         while( !feof($h) ){
 		    if(trim(fgets($h)) == $user){
                 $log = 1;
                 $_SESSION['uname'] = $user;
             }
         }
+        // exit the site if the user does not exist
         if($log == 0){
            echo "The username does not exist!";
            exit;
         }
         fclose($h);
-        // echo $log;
-        // echo $_SESSION['uname'];
-        // echo $user;
         header("location: upload.html");
 ?>

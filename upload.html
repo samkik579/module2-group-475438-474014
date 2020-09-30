@@ -1,34 +1,37 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>loadPage</title>
+	<title>My Files</title>
 </head>
 <body>
+	<center>
 
-	<form action="logout.php" method="POST">
-			<input type="submit" value="Logout" />
-	</form>>
-
-
+	<h2> View My Files</h2>
+	<!--view my file button, direct users to list.php page, showing all their files-->
 	<form action="list.php" method="POST">
-			<input type="submit" value="List File" />
-	</form>>
+			<input type="submit" value="My Files" />
+	</form>
 
-
+	<h2> Upload New Files</h2>
+	<!--upload newfile function, allow users to choose file from local directory and upload to server-->
     <form enctype="multipart/form-data" action="upload.php" method="POST">
 	<p>
 		<input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
-		<label for="uploadfile_input">Choose a file to upload:</label> <input name="uploadedfile" type="file" id="uploadfile_input" />
+		<label for="uploadfile_input">Choose a file to upload:</label> 
+		<input name="uploadedfile" type="file" id="uploadfile_input" />
 	</p>
 	<p>
 		<input type="submit" value="Upload File" />
-    </p>
-    
+    </p>    
+	</form>
+	<!-- logout function-->
+	<form action="logout.php" method="POST">
+	<p><br><br>
+		<input type="submit" value="Logout" />
+	</p>
 	</form>
 
+	</center>
 
 </body>
 </html>

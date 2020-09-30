@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>listPage</title>
+	<title>DeletePage</title>
 </head>
 <?php
         session_start();
         $username = $_SESSION['uname'];
         $filename = $_GET['Lname'];
-       // echo $filename;
         $full_path = sprintf("/srv/uploads/%s/%s", $username,$filename);
+    // return success page if success
         if(unlink($full_path)){
             echo "Success";
         }
@@ -19,6 +19,7 @@
         
 ?>
 <form action = "upload.html" method = "post">
+    <br><br>
     <input type = "submit" value = "Go Back">
 </form>
 

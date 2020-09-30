@@ -11,8 +11,8 @@
             }
         }
         if($log == 0){
-          //  echo "The username does not exist!";
-          //  exit;
+           echo "The username does not exist!";
+           exit;
         }
         fclose($h);
         // echo $log;

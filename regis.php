@@ -9,13 +9,10 @@
 
         $h = fopen("/srv/usersName/users.txt", "r");
         $log = 0;
-
-<<<<<<< Updated upstream
         mkdir("/srv/uploads/".$Aname，0777);
 
         $f = fopen('users.txt','w');
         fwrite($f, "%s\n", htmlentities($Aname));
-=======
         while( !feof($h) ){
 		    if(trim(fgets($h)) == $Aname){
                 $log = 1;
@@ -32,8 +29,8 @@
             fputs($f,$Aname."\n");
         }
         fclose($h);
->>>>>>> Stashed changes
         fclose($f);
+        //code
     ?>
 
     <form action ="login.html" method = "GET">

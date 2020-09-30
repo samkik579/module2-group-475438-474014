@@ -7,7 +7,7 @@
     <?php
     session_start();
     // find the path to the file
-    $filename = $_Get['Lname'];
+    $filename = $_GET['newf'];
     $username = $_SESSION['uname'];
     $full_path = sprintf("/srv/uploads/%s/%s", $username, $filename);
     $finfo = new finfo(FILEINFO_MIME_TYPE);
@@ -23,3 +23,4 @@
         <input type = "submit" value = "Go Back">
     </form>
 </html>
+

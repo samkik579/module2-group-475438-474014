@@ -12,11 +12,10 @@
     $username = $_SESSION['uname'];
     $full_path = sprintf("/srv/uploads/%s", $username);
     $files = scandir($full_path);
-
-    //enable the delete function
+    //also enable the delete function
         foreach($files as $one){
             if($one !== "."&& $one !== ".."){
-            echo "<a href = './display.php?Lname=$one' name = 'filename'> $one </a>";
+          echo "<a href= './display.php?newf=$one'>$one</a>";
             echo "<form action = './delete.php?Lname=$one' method = 'POST'> 
              <input type = 'submit' value= 'Delete' name = 'filename' value=$one> </input></form>";
             }
@@ -32,3 +31,4 @@
 </center>
 </body>
 </html>
+

@@ -1,7 +1,7 @@
 <?php
     session_start();
         $user = $_GET['username'];
-        $h = fopen("users.txt", "r");
+        $h = fopen("/srv/usersName/users.txt", "r");
         $log = 0;
         //echo "<ul>\n";
         while( !feof($h) ){

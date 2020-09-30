@@ -8,7 +8,7 @@
         session_start();
         $username = $_SESSION['uname'];
         $filename = $_GET['Lname'];
-        echo $filename;
+       // echo $filename;
         $full_path = sprintf("/srv/uploads/%s/%s", $username,$filename);
         if(unlink($full_path)){
             echo "Success";

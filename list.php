@@ -13,8 +13,9 @@
 
         foreach($files as $one){
             // $_SESSION['f'] = $one;
-            echo "<a href = 'display.php' name = 'filename'> $one </a>";
-            echo "<form action = 'delete.php' method = 'POST'>  <input type = 'submit' value= 'Delete' name = 'filename'> </input></form>";
+            echo "<a href = './display.php?Lname=$one' name = 'filename'> $one </a>";
+            echo "<form action = './delete.php?Lname=$one' method = 'POST'> 
+             <input type = 'submit' value= 'Delete' name = 'filename' value=$one> </input></form>";
         }
         
 ?>

@@ -7,7 +7,7 @@
     <?php
     session_start();
 
-    $filename = $_SESSION['f'];
+    $filename = $_Get['Lname'];
 
     $username = $_SESSION['uname'];
 
